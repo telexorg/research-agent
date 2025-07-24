@@ -32,16 +32,27 @@ export const conductGroqResearch = async (
     - Conduct in-depth research using grounded information from search results.
     - Focus on any provided keywords as the core angle or scope.
     - Generate a well-structured report using clear Markdown formatting.
-    - Include relevant SEO keywords section after the report presented as a bullet list or inline.
-    - Do NOT fabricate content; rely exclusively on grounded data.
-    - End the response with a 'Sources' section listing the websites referenced.
+
+    ## Keyword Inclusion
+    - For blog-worthy topics only, include a labeled inline section titled “SEO Keywords” at the after the report.
+    - SEO keywords must reflect actual popular search queries related to the topic.
+    - Do NOT fabricate keywords or content. Use grounded data from search results or source material.
+
+    -## Sources Section
+    - End every response with a clearly labeled section titled “Sources”.
+    - For each referenced source:
+      - Include the **title** of the article or page.
+      - Provide the **URL** to the source.
+    - Only include sources that were actually used or cited in the report.
+    - Do NOT fabricate or guess links or titles.
+    - Structure the list as bullet points in Markdown.
 
     ## Task 2: Suggest Trending Topics
-    If the user requests trending topic ideas or suggestions:
+    If the user requests trending topic ideas or suggestions, perform a websearch to:
     - Identify 5–7 emerging topics on the users area of interest based on current search trends.
     - For each topic:
       1. Provide a one-sentence description explaining its relevance.
-      2. List 3–5 SEO-friendly keywords people are actively searching for.
+      2. List 3–5 SEO-friendly keywords people are actively searching for presented as inline.
     - Use Markdown formatting for clarity.
     - Do NOT include a full research report in this mode.
     - Ground all suggestions using live search data; do NOT guess or invent.

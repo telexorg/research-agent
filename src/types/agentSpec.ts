@@ -5,28 +5,34 @@ export interface AgentSpec {
   version: string;
   iconUrl: string;
   documentationUrl: string;
-  capabilities: {
-    streaming: boolean;
-    pushNotifications: boolean;
-  };
+  capabilities: AgentCapabilities;
   defaultInputModes: string[];
   defaultOutputModes: string[];
-  skills: Skill[];
-  provider: {
-    organization: string;
-    url: string;
-  };
+  skills: AgentSkill[];
+  provider: AgentProvider;
   security: Record<string, string[]>[];
   securitySchemes: Record<string, SecurityScheme>;
   supportsAuthenticatedExtendedCard: boolean;
 }
 
-export interface Skill {
+export interface AgentCapabilities {
+  streaming?: boolean;
+  pushNotifications?: boolean;
+  stateTransitionHistory?: boolean;
+}
+
+export interface AgentProvider {
+  organization: string;
+  url?: string;
+}
+export interface AgentSkill {
   id: string;
   name: string;
-  description: string;
-  tags: string[];
-  examples: string[];
+  description?: string;
+  tags?: string[];
+  examples?: string[];
+  inputModes?: string[];
+  outputModes?: string[];
 }
 
 export interface SecurityScheme {
@@ -35,3 +41,4 @@ export interface SecurityScheme {
   in?: string;
   name?: string;
 }
+

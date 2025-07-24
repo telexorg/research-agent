@@ -1,8 +1,8 @@
 export const getAgentCard = () => ({
-  name: "Raz - Research Agent",
+  name: "Research Agent",
   description:
     "The Research Agent helps users conduct real-time research on any topic using AI-powered search, summarization, and synthesis. It delivers grounded insights from live sources with markdown formatting and SEO awareness.",
-  url: "https://research-agent.onrender.com/api/a2a",
+  url: "https://research-agent-dyib.onrender.com/api/a2a",
   version: "1.0.0",
   iconUrl:
     "https://your-cdn.com/images/research-agent-icon.png",

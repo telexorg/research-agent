@@ -25,7 +25,7 @@ export const conductGroqResearch = async (
   keywords?: string
 ): Promise<ResearchResult> => {
   const systemPrompt = `
-    You are a world-class AI research assistant, capable of performing two distinct tasks: topic research and trending topic discovery. You must follow the correct behavior based on the user's intent.
+    Your name is Raz, you are a world-class AI research assistant, capable of performing two distinct tasks: topic research and trending topic discovery. You must follow the correct behavior based on the user's intent.
 
     ## Task 1: Research a Given Topic
     If the user requests a research report:

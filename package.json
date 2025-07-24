@@ -4,23 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "dev": "nodemon src/index.ts",
-  "build": "tsc",
-  "start": "node dist/index.js"
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts"
   },
-  "keywords": ["AI", "Research", "Agent"],
+  "keywords": [
+    "AI",
+    "Research",
+    "Agent"
+  ],
   "author": "Fabian Muoghalu",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
+  "module": "CommonJS",
   "dependencies": {
     "@google/genai": "^1.10.0",
+    "@google/generative-ai": "^0.24.1",
+    "cheerio": "^1.1.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.15",
+    "@types/node-fetch": "^2.6.12",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "eslint": "^9.31.0",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"

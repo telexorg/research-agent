@@ -29,7 +29,7 @@ export interface Artifact {
 
 export interface Task {
   id: string;
-  sessionId?: string;
+  contextId?: string;
   status: TaskStatus;
   artifacts?: Artifact[];
   history?: Message[];

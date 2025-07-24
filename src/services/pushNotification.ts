@@ -13,7 +13,7 @@ export const sendToTelexWebhook = async (
     try {
       const res = await axios.post(webhookUrl, payload, {
         headers: {
-          "X-AGENT-API-KEY": apiKey,
+          "X-TELEX-API-KEY": apiKey,
           "Content-Type": "application/json"
         },
         timeout: 8000 // optional: fail fast if Telex isn't responding

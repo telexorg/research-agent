@@ -15,7 +15,7 @@ export const buildPushNotificationPayload = (
     jsonrpc: a2aRequest.jsonrpc,
     result: {
       id: taskId,
-      sessionId: a2aRequest.params.message.contextId,      
+      contextId: a2aRequest.params.message.contextId,      
       status: {
         state: TaskState.COMPLETED,
         message: {
